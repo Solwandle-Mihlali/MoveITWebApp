@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --secondary: rgb(29, 29, 29);
+}
+ain {
+  display: flex;
+  flex-direction: column;
+  width: 95;
+  min-height: 100vh;
+  border: solid white 1px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  height: 10vh;
+  width: 100%;
+  box-shadow: 3px 3px 10px rgb(64, 64, 64);
+ 
+  background: var(--secondary);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#headerLogo {
+  height: 95%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#headerLogo img {
+  height: 90%;
 }
 
-.card {
-  padding: 2em;
+.welcomeSection {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.signin {
+  background: var(--secondary);
+  width: 100%;
+  height: 60vh;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 10px var(--secondary);
 }
 
-.read-the-docs {
-  color: #888;
+.signin form {
+ 
+  height: 60%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+.signin form label {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 95%;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+.signin form label input {
+  height: 5vh;
+  margin-top: 10px;
+  width: 95%;
+  background: transparent;
+  border: solid rgb(119, 119, 119)  1px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  font-size: 20px;
+  color: rgb(161, 161, 161);
+  padding-left: 5px;
+}
+
+.signin form label p {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: rgb(184, 184, 184);
+  width: 95%;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-left: 5px;
+
+
+}
+
+.signin button {
+  background: rgb(230, 16, 16);
+  border: none;
+  width: 60%;
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+  height: 5vh;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px var(--secondary);
+}
+.welcomeSVG {
+  width: 100%;
+  height: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeSVG iframe {
+  border: none;
+  height: 25vh;
 }

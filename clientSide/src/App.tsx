@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { images } from "./assets/assets";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [showMainContainer, setShowMainContainer] = useState(true);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <header>
+        <span id="headerLogo">
+          <img src={images.moveIT} alt="" />
+        </span>
+        <span id="spacer"></span>
+        <span id="toggler">
+          <img src={""} alt="" />
+        </span>
+      </header>
+      <section className="welcomeSection">
+        <div className="welcomeSVG">
+          <iframe src="https://lottie.host/embed/deae80b7-8765-4caf-b077-eaf59798102c/ahgp51RQSc.json"></iframe>
+        </div>
+
+        <div className="signin">
+          <form action="post">
+            <label htmlFor="#">
+              Username
+              <input type="text" />
+            </label>
+            <label htmlFor="#">
+              Password
+              <input type="password" />
+              <p>Forgot Password</p>
+            </label>
+            <button>SIGN IN</button>
+          </form>
+        </div>
+      </section>
+
+      {showMainContainer && <></>}
+    </main>
+  );
 }
 
-export default App
+export default App;

@@ -1,9 +1,9 @@
-import { useState } from "react";
+
 import "./App.css";
 import { images } from "./assets/assets";
 
 function App() {
-  const [showMainContainer, setShowMainContainer] = useState(true);
+  
   return (
     <main>
       <header>
@@ -22,6 +22,7 @@ function App() {
 
         <div className="signin">
           <form action="post">
+            <p>Welcome</p>
             <label htmlFor="#">
               Username
               <input type="text" />
@@ -36,7 +37,6 @@ function App() {
         </div>
       </section>
 
-      {showMainContainer && <></>}
     </main>
   );
 }
